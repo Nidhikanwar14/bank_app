@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public abstract class Accounts_Abstract implements Account_interface {
     private static HashMap<String, Account> map_icici = new HashMap<>();
-//    private static HashMap<String, Account> map_hdfc = new HashMap<>();
 
     public void create_account(Account acc) {
         map_icici.put(acc.getOwner(), acc);
