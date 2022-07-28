@@ -4,11 +4,12 @@ import io.tntra.example.final_bank_app.Enum.Account_enum;
 import io.tntra.example.final_bank_app.Exception.InsufficientAmount;
 import io.tntra.example.final_bank_app.Interface.Account_interface;
 import io.tntra.example.final_bank_app.Model.Account;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
-
-public abstract class Accounts_Abstract implements Account_interface {
+@Component
+public  class Accounts_Abstract implements Account_interface {
     private static HashMap<String, Account> map_icici = new HashMap<>();
 //    private static HashMap<String, Account> map_hdfc = new HashMap<>();
 
