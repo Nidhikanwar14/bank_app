@@ -58,8 +58,7 @@ public class Account {
         return acc_type;
     }
 
-    public void setAcc_type(Account_enum acc_type) {
-        this.acc_type = acc_type;
+    public void setAcc_type(String text) {
+        this.acc_type = Account_enum.compare(text);
     }
-
 }
