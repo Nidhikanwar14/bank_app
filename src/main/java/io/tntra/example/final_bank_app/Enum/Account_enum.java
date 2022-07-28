@@ -8,4 +8,19 @@ public enum Account_enum {
     Account_enum(String value) {
         this.value = value;
     }
+
+    private String getValue() {
+        return this.value;
+    }
+    public static Account_enum compare(String text){
+        Account_enum acc_type[] = Account_enum.values();
+        for(Account_enum type : acc_type){
+            if(type.getValue().equalsIgnoreCase(text)){
+                return type;
+            }
+        }
+       return CURRENT;
+    }
+
+
 }

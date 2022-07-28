@@ -3,6 +3,7 @@ package io.tntra.example.final_bank_app.Controller;
 import io.tntra.example.final_bank_app.Exception.InsufficientAmount;
 import io.tntra.example.final_bank_app.Model.Account;
 import io.tntra.example.final_bank_app.Services.ICICI_Services;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,13 +17,13 @@ public class ICICI_Controller {
         this.icici_services = icici_services;
     }
 
-    @PostMapping  (value = "/account")
+    @PostMapping  (value = "/account_icici")
     public ResponseEntity<Object> create_account(@RequestBody Account account){
        icici_services.create_account(account);
         return new ResponseEntity<>("Account created succesfully!!!", HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/account")
+    @GetMapping(value = "/account_icici")
     public ResponseEntity<Object> get_account(){
         return new ResponseEntity<>(icici_services.get_account(),HttpStatus.OK);
     }
